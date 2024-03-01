@@ -37,3 +37,40 @@ class Product:
 
 p1 = Product("Glass", 202021, 1200)
 print(p1.name, p1.product_number, p1.price)
+
+class User:
+    def __init__(self, firstName, lastName, likesCount, friendsName):
+        self.fn = firstName
+        self.ln = lastName
+        self.lc = likesCount
+        self.fl = friendsName
+
+    def introduction(self):
+        print( "User Info: "+ self.fn, self.ln + " Likes:", self.lc)
+
+        print("Friend List: ")
+        for friend in self.fl:
+            print("- ", friend)
+
+userOne = User("Moises", "Paule", 100, ["Paul", "Mark", "Ric"])
+print(userOne.introduction())
+
+class employee:
+    def __init__(self, name, age, wage):
+        self.name = name
+        self.age = age
+        self.wage = wage
+
+    def employeeInfo(self):
+        print("Name:", self.name, "Age:",self.age,)
+        print("Wage:", self.wage)
+
+print("Enter Employee Name, Age and Wage: [Provided with space]")
+
+inputName = str(input("Enter Name: "))
+inputAge = int(input("Enter Age: "))
+inputWage = float(input("Enter Wage: "))
+
+
+EmployeeOne = employee(inputName, inputAge, inputWage)
+EmployeeOne.employeeInfo()
